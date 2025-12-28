@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AvatarItem extends Model
+final class AvatarItem extends Model
 {
     use HasFactory;
 
