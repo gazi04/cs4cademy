@@ -17,11 +17,11 @@ class AvatarItemFactory extends Factory
     public function definition(): array
     {
         return [
-            "name" => $this->faker->unique()->colorName()." ".$this->faker->word(),
-            "description" => $this->faker->sentence(),
-            "type" => $this->faker->randomElement(['hat', 'shirt', 'gear', 'background']),
-            "cost" => $this->faker->numberBetween(50, 2000),
-            "image_path" => "images/avatar-items/".$this->faker->word().".png",
+            'name' => $this->faker->unique()->colorName().' '.$this->faker->word(),
+            'description' => $this->faker->sentence(),
+            'type' => $this->faker->randomElement(['hat', 'shirt', 'gear', 'background']),
+            'cost' => $this->faker->numberBetween(50, 2000),
+            'image_path' => 'images/avatar-items/'.$this->faker->word().'.png',
         ];
     }
 }

@@ -11,15 +11,15 @@ final class Lesson extends Model
 {
     use HasFactory;
 
-    protected $table = "lessons";
+    protected $table = 'lessons';
 
     protected $fillable = [
-        "course_id",
-        "title",
-        "content",
-        "order_index",
-        "xp_reward",
-        "coin_reward",
+        'course_id',
+        'title',
+        'content',
+        'order_index',
+        'xp_reward',
+        'coin_reward',
     ];
 
     public function course(): BelongsTo

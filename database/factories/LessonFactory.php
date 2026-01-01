@@ -19,8 +19,8 @@ class LessonFactory extends Factory
     {
         return [
             'course_id' => Course::factory(), // Automatically creates a course if none is provided
-            'title' => 'Mission: ' . $this->faker->sentence(3),
-            'content' => '## Objective' . "\n" . $this->faker->paragraphs(3, true) . "\n" . '```bash' . "\n" . 'ls -la' . "\n" . '```',
+            'title' => 'Mission: '.$this->faker->sentence(3),
+            'content' => '## Objective'."\n".$this->faker->paragraphs(3, true)."\n".'```bash'."\n".'ls -la'."\n".'```',
             'order_index' => $this->faker->numberBetween(1, 20),
             'xp_reward' => $this->faker->randomElement([100, 150, 200]),
             'coin_reward' => $this->faker->randomElement([25, 50, 75]),

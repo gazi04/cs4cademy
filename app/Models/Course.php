@@ -10,13 +10,13 @@ final class Course extends Model
 {
     use HasFactory;
 
-    protected $table = "courses";
+    protected $table = 'courses';
 
     protected $fillable = [
-        "title",
-        "slug",
-        "description",
-        "icon_path",
+        'title',
+        'slug',
+        'description',
+        'icon_path',
     ];
 
     public function lessons(): HasMany

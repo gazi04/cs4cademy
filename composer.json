@@ -69,7 +69,10 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
-        ]
+        ],
+        "rector-fix": "./vendor/bin/rector process",
+        "rector-dry": "./vendor/bin/rector process --dry-run",
+        "pint": "./vendor/bin/pint"
     },
     "extra": {
         "laravel": {
