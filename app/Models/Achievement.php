@@ -9,12 +9,12 @@ final class Achievement extends Model
 {
     use HasFactory;
 
-    protected $table = "achievements";
+    protected $table = 'achievements';
 
     protected $fillable = [
-        "name",
-        "description",
-        "icon_path",
-        "xp_bonus",
+        'name',
+        'description',
+        'icon_path',
+        'xp_bonus',
     ];
 }

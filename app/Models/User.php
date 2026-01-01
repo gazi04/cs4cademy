@@ -12,7 +12,7 @@ final class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $table = "users";
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -20,13 +20,13 @@ final class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        "name",
-        "email",
-        "password",
-        "xp",
-        "level",
-        "coins",
-        "equipped_avatar_item_id",
+        'name',
+        'email',
+        'password',
+        'xp',
+        'level',
+        'coins',
+        'equipped_avatar_item_id',
     ];
 
     /**
@@ -35,8 +35,8 @@ final class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        "password",
-        "remember_token",
+        'password',
+        'remember_token',
     ];
 
     /**
@@ -47,8 +47,8 @@ final class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            "email_verified_at" => "datetime",
-            "password" => "hashed",
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
         ];
     }
 
@@ -58,7 +58,7 @@ final class User extends Authenticatable
      */
     public function equippedItem(): BelongsTo
     {
-        return $this->belongsTo(AvatarItem::class, "equipped_avatar_item_id");
+        return $this->belongsTo(AvatarItem::class, 'equipped_avatar_item_id');
     }
 
     /**
@@ -67,7 +67,7 @@ final class User extends Authenticatable
      */
     public function inventory(): BelongsToMany
     {
-        return $this->belongsToMany(AvatarItem::class, "user_inventory");
+        return $this->belongsToMany(AvatarItem::class, 'user_inventory');
     }
 
     /**
@@ -76,7 +76,7 @@ final class User extends Authenticatable
      */
     public function achievements(): BelongsToMany
     {
-        return $this->belongsToMany(Achievement::class, "user_achievements")
+        return $this->belongsToMany(Achievement::class, 'user_achievements')
             ->withTimestamps(); // Useful for tracking unlock time
     }
 
@@ -86,8 +86,8 @@ final class User extends Authenticatable
      */
     public function lessonProgress(): BelongsToMany
     {
-        return $this->belongsToMany(Lesson::class, "user_lesson_progress")
-            ->withPivot("completed", "completed_at") // Get the status from the pivot table
+        return $this->belongsToMany(Lesson::class, 'user_lesson_progress')
+            ->withPivot('completed', 'completed_at') // Get the status from the pivot table
             ->withTimestamps();
     }
 }

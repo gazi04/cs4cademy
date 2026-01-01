@@ -9,13 +9,13 @@ final class AvatarItem extends Model
 {
     use HasFactory;
 
-    protected $table = "avatar_items";
+    protected $table = 'avatar_items';
 
     protected $fillable = [
-        "name",
-        "description",
-        "type",
-        "cost",
-        "image_path",
+        'name',
+        'description',
+        'type',
+        'cost',
+        'image_path',
     ];
 }

@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class XpLog extends Model
 {
-    protected $table = "xp_logs";
+    protected $table = 'xp_logs';
 
     protected $fillable = [
-        "user_id",
-        "amount",
-        "description"
+        'user_id',
+        'amount',
+        'description',
     ];
 }

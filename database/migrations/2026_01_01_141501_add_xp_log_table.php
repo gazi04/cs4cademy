@@ -8,19 +8,19 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create("xp_logs", function (Blueprint $table) {
+        Schema::create('xp_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id")->constrained()->onDelete("cascade");
-            $table->integer("amount");
-            $table->string("description")->nullable();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->integer('amount');
+            $table->string('description')->nullable();
 
-            $table->timestamp("created_at")->useCurrent()->index();
-            $table->timestamp("updated_at")->useCurrent();
+            $table->timestamp('created_at')->useCurrent()->index();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists("xp_transactions");
+        Schema::dropIfExists('xp_transactions');
     }
 };

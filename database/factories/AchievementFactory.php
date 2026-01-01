@@ -17,10 +17,10 @@ class AchievementFactory extends Factory
     public function definition(): array
     {
         return [
-            "name" => $this->faker->unique()->words(3, true),
-            "description" => $this->faker->sentence(),
-            "icon_path" => "icons/achievements/".$this->faker->word().".png",
-            "xp_bonus" => $this->faker->randomElement([50, 100, 250, 500]),
+            'name' => $this->faker->unique()->words(3, true),
+            'description' => $this->faker->sentence(),
+            'icon_path' => 'icons/achievements/'.$this->faker->word().'.png',
+            'xp_bonus' => $this->faker->randomElement([50, 100, 250, 500]),
         ];
     }
 }
